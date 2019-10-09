@@ -1,0 +1,201 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    /*"nav floats in mobile view"*/
+    width: 100%;
+    background-color: grey;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.nav-links {
+    display: none;
+}
+
+.proj-preview {
+    border: 2px solid green;
+}
+
+.headshot-sm {
+    height: auto;
+    width: auto;
+    max-width: 64px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.headshot-lg {
+    visibility: hidden;
+    display: none;
+}
+
+#about-and-links-container {
+    background-color: lightblue;
+    width: auto;
+}
+
+.proj-preview {
+    max-width: 100%;
+}
+
+h2, h3, p {
+    text-align: center;
+}
+
+.section {
+    border: 2px solid red;
+    border-radius: 20px;
+    margin: 10px 10px 10px 10px;
+}
+.indiv-project-container {
+    border: 1px solid yellow;
+    margin: 20px;
+}
+
+footer {
+    width: 100%;
+    background-color: grey;
+    font-size: 12px;
+}
+
+h4 {
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+#med-contact-links {
+    visibility: hidden;
+    height: 1px;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: lightyellow;
+    }
+
+    footer {
+       visibility: hidden;
+    }
+
+    #med-contact-links {
+        visibility: visible;
+        height: auto;
+        width: 25vw;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    #about-and-links-container {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #about-me {
+        width: calc((100vw / 4) * 3);
+    }
+
+    .proj-preview {
+        max-width: 66vh;
+    }
+    
+    .indiv-project-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .indiv-project-container > p {
+        width: 33vw;
+    }
+
+    .indiv-project-container > h3 {
+        flex: 0 0 100%;
+    }
+
+    .headshot-sm {
+        max-height: 64px;
+        max-width: 64px;
+        margin: 5px;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    body {
+        background-color: pink;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .nav-item { margin-left: 10px; margin-right: 10px;}
+
+    #med-contact-links {
+        background-color: red;
+        width: 0;
+        display: none;
+    }
+
+    #about-me {
+        width: 100%;
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+
+    #about-me > h2 {
+        flex: 0 0 100%;
+    }
+
+    #about-me > p {
+        width: 85%;
+    }
+
+    .headshot-sm {
+        visibility: hidden;
+        display: none;
+    }
+
+    .headshot-lg {
+        visibility: visible;
+        display: flex;
+        width: 128px;
+        border-radius: 50%;
+        border: 2px solid black;
+    }
+
+    .contact-links {
+        flex-direction: row;
+    }
+
+    footer {
+        visibility: visible;
+    }
+}
