@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Poppins', serif;
+    font-family: 'Halant', sans-serif;
+}
+
+.icon {
+    height: 32px;
+    width: 32px;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -8,24 +18,28 @@ html {
     padding: 0;
 }
 
+body {
+    background-color: black;
+}
+
+ul {
+    list-style: none;
+}
+
 nav {
     /*"nav floats in mobile view"*/
     width: 100%;
-    background-color: grey;
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
 }
 
 .nav-links {
     display: none;
-}
+    font-family: 'Poppins';
 
-.proj-preview {
-    border: 2px solid green;
 }
 
 .headshot-sm {
@@ -34,7 +48,11 @@ nav {
     max-width: 64px;
     margin: 10px;
     border-radius: 50%;
-    border: 2px solid black;
+    border: 3px solid #F2D653;
+}
+
+.title {
+    font-size:4rem;
 }
 
 .headshot-lg {
@@ -43,36 +61,46 @@ nav {
 }
 
 #about-and-links-container {
-    background-color: lightblue;
-    width: auto;
+    width: 75%;
+    margin: auto;
+    margin-top: 10px;
 }
 
 .proj-preview {
     max-width: 100%;
 }
 
-h2, h3, p {
-    text-align: center;
+h1, a, h4 {
+    color: orangered;
+    font-family: "Poppins";
+    text-decoration: none;
 }
 
-.section {
-    border: 2px solid red;
-    border-radius: 20px;
-    margin: 10px 10px 10px 10px;
+h2, h3 {
+    color: orangered;
+    font-family: "Poppins";
+    font-size: 1.75rem;
 }
-.indiv-project-container {
-    border: 1px solid yellow;
-    margin: 20px;
+
+p {
+    margin: 10px;
+    color: #f4ebc1;
+    font-family: "Halant";
+    font-size: 1rem;
+    font-weight: bolder;
+    line-height: 1.5;
+}
+
+a {
+    font-weight: bold;
+}
+
+h2, h3, h4, p {
+    text-align: center;
 }
 
 footer {
     width: 100%;
-    background-color: grey;
-    font-size: 12px;
-}
-
-h4 {
-    text-align: center;
 }
 
 .contact-links {
@@ -87,18 +115,30 @@ h4 {
 }
 
 @media only screen and (min-width: 768px) {
-    body {
-        background-color: lightyellow;
-    }
-
     footer {
        visibility: hidden;
+    }
+
+    #octo {
+    }
+
+    #scroll-down {
+        height: 64px;
+        width: 64px;
+        position: absolute;
+        bottom: 50%;
+        right: 50%;
     }
 
     #med-contact-links {
         visibility: visible;
         height: auto;
         width: 25vw;
+    }
+
+    #projects {
+        width: auto;
+        margin: 10px;
     }
 
     .contact-links {
@@ -112,7 +152,7 @@ h4 {
     }
 
     #about-me {
-        width: calc((100vw / 4) * 3);
+        width: calc((100vw / 4) * 2);
     }
 
     .proj-preview {
@@ -123,6 +163,8 @@ h4 {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        border: 2px #f4ebc1;
+        border-style: dotted none;
     }
 
     .indiv-project-container > p {
@@ -141,10 +183,9 @@ h4 {
 }
 
 @media only screen and (min-width: 1080px) {
-    body {
-        background-color: pink;
+    h1 {
+        font-size: 2.75rem;
     }
-
     nav {
         display: flex;
         justify-content: space-between;
@@ -156,10 +197,21 @@ h4 {
         justify-content: space-evenly;
     }
 
-    .nav-item { margin-left: 10px; margin-right: 10px;}
+    .nav-item {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 1.5rem;
+    }
+
+    #scroll-down {
+        height: 64px;
+        width: 64px;
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+    }
 
     #med-contact-links {
-        background-color: orange;
         width: 0;
         display: none;
     }
@@ -170,12 +222,27 @@ h4 {
         flex-wrap: wrap;
     }
 
+    h2 {
+        font-size: 2rem;
+    }
+
+    .proj-preview {
+        max-width: 22vw;
+    }
+
+    #about-me {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
     #about-me > h2 {
-        flex: 0 0 100%;
+        margin-bottom: 50px;
     }
 
     #about-me > p {
-        width: 85%;
+        width: 45%;
+        margin: 50px;
     }
 
     .headshot-sm {
@@ -188,14 +255,50 @@ h4 {
         display: flex;
         width: 128px;
         border-radius: 50%;
-        border: 2px solid black;
+        border: 3px solid #f4ebc1;
+        margin: 50px;
     }
 
     .contact-links {
         flex-direction: row;
+        margin: 100px 0 50px 0;
     }
 
     footer {
         visibility: visible;
+    }
+
+    #proj-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+
+    .proj-preview {
+        max-width: border-box;
+    }
+
+    .indiv-project-container {
+        max-width: 25%;
+        margin: 100px 0 100px 0;
+        padding: 50px 0 50px 0;
+    }
+
+    .indiv-project-container > p {
+        text-align: left;
+        margin-top: 50px;
+        height: 350px;
+        width: auto;
+    }
+
+    .indiv-project-container > h3 {
+        margin: 50px 0 50px 0;
+    }
+
+    .resize {
+        height: 230px;
+        width: 422px;
     }
 }

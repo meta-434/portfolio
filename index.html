@@ -4,6 +4,7 @@
     <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Halant|Poppins&display=swap" rel="stylesheet">
     <title>Alex Hapgood</title>
     <link rel = "stylesheet"
           type = "text/css"
@@ -11,22 +12,34 @@
 </head>
 <body>
     <nav>
-        <img class="headshot-sm" src="22525699.jpeg" alt="alex hapgood headshot">
-        <h1 class="title">Alex Hapgood</h1>
+        <img class="headshot-sm" src="./images/22525699.jpeg" alt="alex hapgood headshot">
+        <h1 class="title">Alex<br /> Hapgood</h1>
         <ul class="nav-links">
             <li class="nav-item"><a href="#about-me">About Me</a></li>
+            <li class="nav-item"><p> | </p></li>
             <li class="nav-item"><a href="#projects">Projects</a></li>
+            <li class="nav-item"><p> | </p></li>
             <li class="nav-item"><a href="#footer-links">Contact Info</a></li>
         </ul>
     </nav>
+    <img id="octo-lg" alt="octopus tentacle" src="./images/octo-lg.jpg"/>
+    <img src="./images/scroll-down-2.png" alt="scroll down indicator" id="scroll-down" />
     <main>
         <div id="about-and-links-container">
             <div class="section" id="about-me">
                 <h2>About Me</h2>
-                <img class="headshot-lg" src="22525699.jpeg" alt="alex hapgood headshot">
-                <p>Lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.
+                <img class="headshot-lg" src="./images/22525699.jpeg" alt="alex hapgood headshot">
+                <p>Hi, I'm Alex. I'm a full-stack developer, with particular interest in React.
+                    I'm currently a employed with Sigora Solar, working with and learning about
+                    Kubernetes, AWS, GraphQL, Apache Cordova, Sentry, Cypress, and of course, React.
+                    I'm helping develop and maintain their internal tools intended to be deployed
+                    to various mobile platforms. I really enjoy the puzzle of designing and
+                    implementing asynchronous code and its associated data flow. I also enjoy
+                    front-end UI design and implementation.
+                <br /><br />
+                    If I'm not working, I'm tinkering with personal coding projects, and building
+                    computers. If I'm not at the computer, I'm at the gym or playing card games,
+                    frisbee, or making music.
                 </p>
 
             </div>
@@ -42,26 +55,63 @@
         </div>
         <div class="section" id="projects">
             <h2>Projects</h2>
-            <div class="indiv-project-container" id="proj1">
-                <h3>Unix Shell Quiz</h3>
-                <img src="quiz_app_screenshot.png" alt="unix shell quiz screenshot" class="proj-preview"/>
-                <p>lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.</p>
-            </div>
-            <div class="indiv-project-container" id="proj2">
-                <h3>Movie Recommendation App</h3>
-                <img src="movieRecs_app_screenshot.png" alt="movie recommendation app landing page" class="proj-preview"/>
-                <p>lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.</p>
-            </div>
-            <div class="indiv-project-container" id="proj3">
-                <h3>Pomodoro App</h3>
-                <img src="pomodoro_app_screenshot.png" alt="pomodoro app landing page" class="proj-preview"/>
-                <p>lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.</p>
+            <div id="proj-wrap">
+                <div class="indiv-project-container" id="proj1">
+                    <h3>Unix Shell Quiz</h3>
+                    <img class="resize" src="./images/quiz_app_screenshot.png" alt="unix shell quiz screenshot" class="proj-preview"/>
+                    <p>A 5-question quiz to test your familiarity with Unix or *nix-like shells.
+                        The quiz varies from easy to moderate difficulty. The quiz's UI is meant
+                        to evoke an old-school terminal and should be navigated with a keyboard.</p>
+                    <a href="https://github.com/meta-434/quizApp">git<br /><img class="icon" src="./images/github.png" alt="github" /></a>
+                    <a href="https://meta-434.github.io/quizApp/">live site<br /><img class="icon" src="./images/globe.png" alt="live site" /></a>
+                    <div>
+                        <h4>tech used</h4>
+                        <img class="icon" src="./images/html5.png" alt="html" title="html5"/>
+                        <img class="icon" src="./images/css.png" alt="css" title="css3"/>
+                        <img class="icon" src="./images/jquery.png" alt="jquery" title="jquery"/>
+
+                    </div>
+                </div>
+                <div class="indiv-project-container" id="proj2">
+                    <h3>Movie Review App</h3>
+                    <img class="resize" src="./images/movieRecs_app_screenshot.png" alt="movie recommendation app landing page" class="proj-preview"/>
+                    <p>React app to research various ratings for movies. Allows for incomplete title names. Displays results in a grid
+                        and aggregates results from OMDb and TMDb (open, free alternatives to IMDB) which displays from various
+                        review sources across the web. (first javascript project I completed)</p>
+                    <a href="https://github.com/meta-434/is-worth-watching">git<br /><img class="icon" src="./images/github.png" alt="github" /></a>
+                    <a href="https://is-worth-watching.herokuapp.com/">live site<br /><img class="icon" src="./images/globe.png" alt="live site" /></a>
+                    <div>
+                        <h4>tech used</h4>
+                        <img class="icon" src="./images/react.png" alt="react" title="react"/>
+                        <img class="icon" src="./images/api.png" alt="api" title="api"/>
+                    </div>
+                </div>
+                <div class="indiv-project-container" id="proj3">
+                    <h3>Pomodoro App</h3>
+                    <img class="resize" src="./images/pomodoro_app_screenshot.png" alt="pomodoro app landing page" class="proj-preview"/>
+                    <p>React app to enable the use of the pomodoro method of time management. The two timers are preset to track the
+                        work periods (25 minutes) and the rest periods (5 minutes). The app uses Google's firebase and oAuth to allow
+                        the option for persistent completed task logging. The app is still usable without being logged in. This app was
+                        a <a style="color: orange" href="https://github.com/meta-434/pomodoro-app/graphs/contributors">2-person</a> effort.
+                    </p>
+                    <a href="https://github.com/meta-434/pomodoro-app">git<br /><img class="icon" src="./images/github.png" alt="github" /></a>
+                    <a href="https://meta434-pomodoro-app.herokuapp.com/">live site<br /><img class="icon" src="./images/globe.png" alt="live site" /></a>
+                    <div>
+                        <h4>tech used</h4>
+                        <img class="icon" src="./images/react.png" alt="react" title="react"/>
+                        <img class="icon" src="./images/node.png" alt="node" title="node"/>
+                        <img class="icon" src="./images/api.png" alt="api" title="api"/>
+                        <img class="icon" src="./images/firebase.png" alt="firebase" title="firebase"/>
+                        <img class="icon" src="./images/google.png" alt="oAuth" title="oAuth"/>
+
+                    </div>
+                </div>
             </div>
         </div>
     </main>
     <footer>
         <div id="footer-links">
-            <h4>My Links</h4>
+            <h2>My Links</h2>
             <ul class="contact-links">
                 <li class="contact-item"><a href="mailto:acyrush@gmail.com?subject=I saw your portfolio, and...">Email</a></li>
                 <li class="contact-item"><a href="https://github.com/meta-434/" target="_blank">Github</a></li>
