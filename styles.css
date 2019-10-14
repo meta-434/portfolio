@@ -8,16 +8,6 @@
     width: 32px;
 }
 
-html {
-    box-sizing: border-box;
-}
-
-*, *::before, *::after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     background-color: black;
 }
@@ -51,23 +41,20 @@ nav {
     border: 3px solid #F2D653;
 }
 
-.title {
-    font-size:4rem;
-}
-
 .headshot-lg {
     visibility: hidden;
     display: none;
 }
 
 #about-and-links-container {
-    width: 75%;
+    width: 100%;
     margin: auto;
     margin-top: 10px;
 }
 
 .proj-preview {
     max-width: 100%;
+    flex-direction: column;
 }
 
 h1, a, h4 {
@@ -114,20 +101,104 @@ footer {
     height: 1px;
 }
 
+main {
+    text-align: center;
+    width: 100%;
+}
+
+title {
+    text-align: left;
+}
+
+#octo-lg {
+    max-width: 100vw;
+}
+
+.resize {
+    width: calc(100vw - 100px);
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#scroll-down {
+    visibility: hidden;
+    display: none;
+}
+
+#projects {
+    width: auto;
+    margin: 10px;
+}
+
+.contact-links {
+    flex-direction: column;
+}
+
+#about-me {
+    width: 100%;
+}
+
+.proj-preview {
+    max-width: 66vh;
+}
+
+.indiv-project-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px #f4ebc1;
+    border-style: dotted none;
+    flex-direction: column;
+}
+
+.indiv-project-container > h3 {
+    flex: 0 0 100%;
+}
+
+h4 {
+    margin: 0;
+}
+
+.headshot-sm {
+    max-height: 64px;
+    max-width: 64px;
+    margin: 5px;
+}
+
 @media only screen and (min-width: 768px) {
+    main {
+        text-align: center;
+        width: 100%;
+    }
+
+    title {
+        text-align: left;
+    }
+
     footer {
        visibility: hidden;
     }
 
-    #octo {
+    #octo-lg {
+        max-width: 100vw;
+    }
+
+    .resize {
+        width: calc(100vw - 100px);
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #scroll-down {
         height: 64px;
         width: 64px;
         position: absolute;
-        bottom: 50%;
-        right: 50%;
+        bottom: 5%;
+        right: 3%;
     }
 
     #med-contact-links {
@@ -160,11 +231,14 @@ footer {
     }
     
     .indiv-project-container {
+        text-align: center;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        align-items: center;
         border: 2px #f4ebc1;
         border-style: dotted none;
+        flex-direction: row;
     }
 
     .indiv-project-container > p {
@@ -173,6 +247,10 @@ footer {
 
     .indiv-project-container > h3 {
         flex: 0 0 100%;
+    }
+
+    h4 {
+        margin: 0;
     }
 
     .headshot-sm {
@@ -298,7 +376,11 @@ footer {
     }
 
     .resize {
-        height: 230px;
-        width: 422px;
+        max-height: 230px;
+        max-width: 422px;
+    }
+
+    a {
+        text-align: center;
     }
 }
