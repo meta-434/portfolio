@@ -86,8 +86,9 @@ h2, h3, h4, p {
     text-align: center;
 }
 
-footer {
+#footer-links {
     width: 100%;
+    visibility: hidden;
 }
 
 .contact-links {
@@ -168,6 +169,11 @@ h4 {
     margin: 5px;
 }
 
+#top-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
 @media only screen and (min-width: 768px) {
     main {
         text-align: center;
@@ -178,7 +184,7 @@ h4 {
         text-align: left;
     }
 
-    footer {
+    #footer-links {
        visibility: hidden;
     }
 
@@ -342,7 +348,7 @@ h4 {
         margin: 100px 0 50px 0;
     }
 
-    footer {
+    #footer-links {
         visibility: visible;
     }
 
@@ -356,7 +362,7 @@ h4 {
     }
 
     .proj-preview {
-        max-width: border-box;
+        max-width:33%;
     }
 
     .indiv-project-container {
@@ -375,11 +381,21 @@ h4 {
     }
 
     .resize {
-        max-height: 230px;
-        max-width: 422px;
+        height: auto;
+        max-width: 100%;
     }
 
     a {
         text-align: center;
     }
+
+    #thanks {
+        max-height: 19px;
+    }
+
+    #thanks > p > img {
+        vertical-align: middle;
+    }
+
+
 }
