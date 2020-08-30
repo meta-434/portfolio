@@ -350,6 +350,7 @@ h4 {
         display: flex;
         flex-direction: row;
         justify-items: center;
+        flex-wrap: wrap;
         justify-content: space-around;
         align-content: space-around;
     }
@@ -359,9 +360,7 @@ h4 {
     }
 
     .indiv-project-container {
-        max-width: 25%;
-        margin: 100px 0 100px 0;
-        padding: 50px 0 50px 0;
+        max-width: 33%;
     }
 
     .indiv-project-container > p {
