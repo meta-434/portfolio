@@ -87,11 +87,11 @@ h2, h3, h4, p {
 
 #footer-links {
     width: 100%;
-    visibility: hidden;
 }
 
-.contact-links {
+.footer-links {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     list-style: none;
 }
@@ -129,10 +129,6 @@ title {
 #projects {
     width: auto;
     margin: 10px;
-}
-
-.contact-links {
-    flex-direction: column;
 }
 
 #about-me {
@@ -217,7 +213,7 @@ h4 {
         margin: 10px;
     }
 
-    .contact-links {
+    .footer-links {
         flex-direction: column;
     }
 
@@ -342,7 +338,7 @@ h4 {
         margin: 50px;
     }
 
-    .contact-links {
+    .footer-links {
         flex-direction: row;
         margin: 100px 0 50px 0;
     }
