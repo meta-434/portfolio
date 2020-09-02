@@ -1,6 +1,5 @@
 @font-face {
-    font-family: 'Poppins', serif;
-    font-family: 'Halant', sans-serif;
+    font-family: 'Poppins', 'Halant', serif;
 }
 
 .icon {
@@ -28,7 +27,7 @@ nav {
 
 .nav-links {
     display: none;
-    font-family: 'Poppins';
+    font-family: 'Poppins', serif;
 
 }
 
@@ -59,20 +58,20 @@ nav {
 
 h1, a, h4 {
     color: orangered;
-    font-family: "Poppins";
+    font-family: "Poppins", serif;
     text-decoration: none;
 }
 
 h2, h3 {
     color: orangered;
-    font-family: "Poppins";
+    font-family: "Poppins", serif;
     font-size: 1.75rem;
 }
 
 p {
     margin: 10px;
     color: #f4ebc1;
-    font-family: "Halant";
+    font-family: "Halant", sans-serif;
     font-size: 1rem;
     font-weight: bolder;
     line-height: 1.5;

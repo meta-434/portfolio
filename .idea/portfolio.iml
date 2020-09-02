@@ -9,5 +9,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="pomodoro-app" />
+    <orderEntry type="library" name="normalize" level="application" />
   </component>
 </module>
