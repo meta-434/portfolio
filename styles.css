@@ -113,11 +113,12 @@ main {
     width: 100%;
 }
 
-title {
+.title {
     text-align: left;
 }
 
 #octo-lg {
+    margin-top: 30px;
     max-width: 100vw;
 }
 
@@ -180,7 +181,78 @@ h4 {
     vertical-align: middle;
 }
 
+.mobile-nav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.mobile-nav #myLinks {
+    display: none;
+}
+
+.hs-link {
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+}
+
+.mobile-nav a {
+    color: orangered;
+    padding: 26px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.mobile-nav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 38px;
+}
+
+.mobile-nav a:hover {
+    background-color: orangered;
+    color: #333333;
+}
+
+.reg-nav{
+    visibility: hidden;
+}
+
+#mobile-abt-me {
+    position: absolute;
+
+}
+
+h2, h3 {
+    position: relative;
+}
+
+h2 span {
+    position: absolute;
+    top: -100px;
+}
+
+h3 span {
+    position: absolute;
+    top: -100px;
+}
 @media only screen and (min-width: 768px) {
+    .mobile-nav {
+        visibility: hidden;
+    }
+
+    .reg-nav {
+        visibility: visible;
+    }
     main {
         text-align: center;
         width: 100%;
