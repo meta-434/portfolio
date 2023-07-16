@@ -97,7 +97,7 @@ export default function Album() {
                             Hey, I'm Alex
                         </Typography>
                         <Avatar alt="Alex Hapgood" src="/headshot.jpeg" sx={{ margin: 'auto', width: 128, height: 128 }}/>
-                        <Typography variant="h7" align="center" color="text.secondary" paragraph sx={{marginTop: '20px'}}>
+                        <Typography align="center" color="text.secondary" paragraph sx={{marginTop: '20px'}}>
                             JavaScript Developer | Full-Stack Engineer <br/>
                             Developer for Sigora Solar <br/>
                             <b><em>Open to new positions!</em></b><br/>
