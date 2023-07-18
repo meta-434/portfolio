@@ -6,7 +6,7 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -30,13 +30,21 @@ function Copyright() {
     );
 }
 
-const cards = [1, 2, 3, 4, 5, 6, 7];
+const cards = [
+    {id: 0, name: "Synergy by Sigora Solar", shortDesc: "A", link: "synergy"},
+    {id: 1, name: "ACIDRT (Albemarle County Illicit Discharge Reporting Tool", shortDesc: "B",  link: "acidrt"},
+    {id: 2, name: "Pomodoro V2", shortDesc: "C",  link: "pomodoro-v2"},
+    {id: 3, name: "Noteful", shortDesc: "D",  link: "noteful"},
+    {id: 4, name: "Unix Shell Quiz", shortDesc: "E",  link: "unixshellquiz"},
+    {id: 5, name: "Movie Lookup App", shortDesc: "F",  link: "movielookup"},
+    {id: 6, name: "Pomodoro V1", shortDesc: "G",  link: "pomodoro-v1"}
+];
 
 const theme = createTheme();
 
 export default function Album() {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-    const open = Boolean(anchorEl);
+    const open = Boolean(anchorEl || undefined);
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl(event.currentTarget);
     };
@@ -103,46 +111,32 @@ export default function Album() {
                             <b><em>Open to new positions!</em></b><br/>
                             Interested in new JS technologies, from front-end to server-side
                         </Typography>
-                        <Stack
-                            sx={{ pt: 4 }}
-                            direction="row"
-                            spacing={2}
-                            justifyContent="center"
-                        >
-                            <Button variant="contained">Main call to action</Button>
-                            <Button variant="outlined">Secondary action</Button>
-                        </Stack>
                     </Container>
                 </Box>
-                <Container sx={{ py: 8 }} maxWidth="md">
+                <Container maxWidth="xl">
                     {/* End hero unit */}
-                    <Grid container spacing={4}>
+                    <Grid container spacing={2}>
                         {cards.map((card) => (
-                            <Grid item key={card} xs={12} sm={6} md={4}>
+                            <Grid item key={card} xs={12}>
                                 <Card
-                                    sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                                    sx={{ display: 'flex', flexDirection: 'column' }}
                                 >
                                     <CardMedia
                                         component="img"
-                                        sx={{
-                                            // 16:9
-                                            pt: '56.25%',
-                                        }}
-                                        image="https://source.unsplash.com/random"
-                                        alt="random"
+                                        image={`/portfolioAssets/${card.link}.png`}
+                                        alt={card.name}
                                     />
                                     <CardContent sx={{ flexGrow: 1 }}>
                                         <Typography gutterBottom variant="h5" component="h2">
-                                            Heading
+                                            {card.name}
                                         </Typography>
                                         <Typography>
-                                            This is a media card. You can use this section to describe the
-                                            content.
+                                            {card.shortDesc}
                                         </Typography>
                                     </CardContent>
                                     <CardActions>
-                                        <Button size="small">View</Button>
-                                        <Button size="small">Edit</Button>
+                                        <Button size="small"><Link href={`/portfolio/${card.link}`}>Read More</Link></Button>
+
                                     </CardActions>
                                 </Card>
                             </Grid>
