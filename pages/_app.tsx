@@ -4,12 +4,11 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider, EmotionCache } from '@emotion/react';
-import {darkTheme} from '../styles/theme/themeOptions';
+import { darkTheme } from '../styles/theme/themeOptions';
 import createEmotionCache from '../utility/createEmotionCache';
 
-
 // Client-side cache, shared for the whole session of the user in the browser.
-  const clientSideEmotionCache = createEmotionCache();
+const clientSideEmotionCache = createEmotionCache();
 
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
