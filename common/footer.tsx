@@ -4,8 +4,8 @@ export default function PortfilioFooter() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="https://www.hapgood.me/">
+        Alex Hapgood
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}

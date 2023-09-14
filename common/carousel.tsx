@@ -9,20 +9,25 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import Image, { StaticImageData } from 'next/image';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-interface IImageObject {
+export interface IImageObject {
   label: string;
-  imgPath: string;
+  imgPath: StaticImageData;
+  width: number;
 }
-type ImagesArray = { data: IImageObject[] };
+export type ImagesArray = { data: IImageObject[] };
 
-export default function ImageCarousel(imgArray: ImagesArray) {
+export default function ImageCarousel(imgArray: ImagesArray, size: string) {
+  console.log('received imgArray: ', imgArray, 'size: ', size);
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const { data } = imgArray;
   const maxSteps = data.length;
+
+  if (size === 'small') return 200;
 
   const handleNext = () => {
     setActiveStep(prevActiveStep => prevActiveStep + 1);
@@ -37,16 +42,19 @@ export default function ImageCarousel(imgArray: ImagesArray) {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
+    <Box
+      sx={{ minWidth: 'fit-content', flexGrow: 1, justifyContent: 'center' }}
+    >
       <Paper
         square
-        elevation={0}
+        elevation={2}
         sx={{
           display: 'flex',
           alignItems: 'center',
           height: 50,
           pl: 2,
           bgcolor: 'background.default',
+          margins: {},
         }}
       >
         <Typography>{data[activeStep].label}</Typography>
@@ -61,17 +69,14 @@ export default function ImageCarousel(imgArray: ImagesArray) {
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
-                component="img"
                 sx={{
-                  height: 255,
                   display: 'block',
-                  maxWidth: 400,
                   overflow: 'hidden',
                   width: '100%',
                 }}
-                src={step.imgPath}
-                alt={step.label}
-              />
+              >
+                <Image src={step.imgPath} alt={step.label} width={step.width} />
+              </Box>
             ) : null}
           </div>
         ))}

@@ -13,6 +13,9 @@ import Avatar from '@mui/material/Avatar';
 import PortfolioAppBar from '@/common/appBar';
 import PortfolioFooter from '@/common/footer';
 
+// const addInts = (a: number, b: number): number => a + b;
+// const testAddInts = expect(addInts(1, 2)).toBe(3);
+
 const cards = [
   { id: 0, name: 'Synergy by Sigora Solar', shortDesc: 'A', link: 'synergy' },
   {
