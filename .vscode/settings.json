@@ -1,6 +1,7 @@
 {
   "json.schemaDownload.enable": true,
   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "eslint.validate": ["typescript", "typescriptreact"],
   "editor.formatOnType": false, // required
   "editor.formatOnPaste": true, // optional
   "editor.formatOnSave": true, // optional
