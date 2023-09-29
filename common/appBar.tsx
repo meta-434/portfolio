@@ -13,7 +13,7 @@ import {
   MenuItem,
 } from '@mui/material';
 
-const pages = ['Home', 'About', 'Projects', 'Contact', 'Blog'];
+const pages = ['About', 'Experience', 'Work', 'Contact', 'Resume'];
 
 export default function PortfolioAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -29,7 +29,7 @@ export default function PortfolioAppBar() {
   };
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="relative">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -50,11 +50,10 @@ export default function PortfolioAppBar() {
           >
             ACH
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="mobile-menu-appbar"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -104,9 +103,10 @@ export default function PortfolioAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            ACH
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }} flexGrow={1} />
+          <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             {pages.map(page => (
               <Button
                 key={page}
