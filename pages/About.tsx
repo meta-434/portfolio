@@ -5,7 +5,7 @@ export default function About() {
     <div id="About">
       <Avatar
         alt="Alex Hapgood"
-        src="/headshot.jpeg"
+        src='../../src/public/headshot.jpeg'
         sx={{ margin: 'auto', width: 128, height: 128 }}
       />
     </div>
