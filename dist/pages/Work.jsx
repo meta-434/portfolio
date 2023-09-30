@@ -8,18 +8,17 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 var cards = [
-    { id: 0, name: 'Synergy by Sigora Solar', shortDesc: 'A', link: 'synergy' },
+    { id: 0, name: 'Synergy by Sigora Solar', shortDesc: 'Synergy - A web application built to enable solar sales. Includes user management, CAD drawing overlays, Google Maps, NearMap, and Google Geocoding APIs, Financing API integrations with multiple lenders, and DocuSign integrated flow. ', link: 'synergy' },
     {
         id: 1,
         name: 'ACIDRT (Albemarle County Illicit Discharge Reporting Tool',
-        shortDesc: 'B',
+        shortDesc: 'ACIDRT ( Albemarle Country Illicit Discharge Reporting Tool ) - A web application for reporting illicit discharges to the Albemarle County Service Authority.',
+        techStack: 'Google Maps API, Recharts, React, React-Router, PostgresQL',
         link: 'acidrt',
     },
     { id: 2, name: 'Pomodoro V2', shortDesc: 'C', link: 'pomodoro2' },
     { id: 3, name: 'Noteful', shortDesc: 'D', link: 'noteful' },
     { id: 4, name: 'Unix Shell Quiz', shortDesc: 'E', link: 'unixshellquiz' },
-    { id: 5, name: 'Movie Lookup App', shortDesc: 'F', link: 'movielookup' },
-    { id: 6, name: 'Pomodoro V1', shortDesc: 'G', link: 'pomodoro1' },
 ];
 export default function Work() {
     return (<Container maxWidth="xl" id="Work">

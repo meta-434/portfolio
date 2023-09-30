@@ -2,8 +2,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import PortfolioAppBar from '../src/common/appBar';
-import PortfolioFooter from '../src/common/footer';
+import PortfolioAppBar from '../common/appBar';
+import PortfolioFooter from '../common/footer';
 import About from './About';
 import Work from './Work';
 export default function Portfolio() {
