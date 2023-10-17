@@ -75,7 +75,7 @@ export default function Portfolio() {
           color="text.secondary"
           component="p"
         >
-          Something here to give the footer a purpose!
+          icons by <a target="_blank" href="https://icons8.com">Icons8</a> and <a target="_blank" href="https://www.svgrepo.com/">SVGRepo</a>
         </Typography>
         <PortfolioFooter />
       </Box>
