@@ -6,6 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { CacheProvider, EmotionCache } from '@emotion/react'
 import { darkTheme } from '../theme/themeOptions'
 import createEmotionCache from '@utils/createEmotionCache'
+import { Analytics } from '@vercel/analytics/react';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
@@ -18,6 +19,7 @@ export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
   return (
     <CacheProvider value={emotionCache}>
+      <Analytics />
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
