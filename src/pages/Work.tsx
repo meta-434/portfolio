@@ -112,9 +112,7 @@ export default function Work() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small" sx={{width: '100%'}}>
-                  <Link target="_blank" href={`/portfolio/${card.client}`}>Client GitHub</Link>
-                </Button>
+                { card.client ? <Button size="small" sx={{width: '100%'}}><Link target="_blank" href={`/portfolio/${card.client}`}>Client GitHub</Link></Button> : ''}
                 { card.server ? <Button size="small" sx={{width: '100%'}}><Link target="_blank" href={'/server'}>Server GitHub</Link></Button>  : ''}
                 { card.liveSite ? <Button size="small" sx={{width: '100%'}}><Link target="_blank" href={`${card.liveSite}`}>Live Site</Link></Button> : ''}
               </CardActions>
