@@ -12,8 +12,9 @@ import {
   Button,
   MenuItem,
 } from '@mui/material';
+import Link from 'next/link';
 
-const pages = ['About', 'Experience', 'Work', 'Contact', 'Resume'];
+const pages = ['About', 'Experience', 'Work', 'Contact'];
 
 const PortfolioAppBar: React.FC = (): ReactElement => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -21,10 +22,12 @@ const PortfolioAppBar: React.FC = (): ReactElement => {
   );
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+    console.log("event open registered", event)
     setAnchorElNav(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+    console.log('handle close called');
     setAnchorElNav(null);
   };
 
@@ -36,8 +39,6 @@ const PortfolioAppBar: React.FC = (): ReactElement => {
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -48,7 +49,9 @@ const PortfolioAppBar: React.FC = (): ReactElement => {
               textDecoration: 'none',
             }}
           >
-            ACH
+            <Link href="/"  style={{ textDecoration: 'none', color: '#FFF' }}>
+              ACH
+            </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -81,17 +84,23 @@ const PortfolioAppBar: React.FC = (): ReactElement => {
             >
               {pages.map(page => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Link href={`/#${page}`} style={{textAlign: "center"}}>{page}</Link>
                 </MenuItem>
               ))}
+              <MenuItem key={'resume'} onClick={handleCloseNavMenu}>
+                <a
+                    href="../public/2023.08.resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                  Resume </a>
+              </MenuItem>
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -103,17 +112,17 @@ const PortfolioAppBar: React.FC = (): ReactElement => {
               textDecoration: 'none',
             }}
           >
-            ACH
+            <Link href="/" style={{ textDecoration: 'none', color: '#FFF' }}>
+              ACH
+            </Link>
           </Typography>
           <Box sx={{ display: { xs: 'none', md: 'flex' } }} flexGrow={1} />
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             {pages.map(page => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
+              <Button sx={{ ml: 1, mr: 1, mt: 0, mb: 0, display: {xs: 'none', md: 'flex'} }}>
+                <Link href={`/#${page}`} style={{ textDecoration: 'none', color: '#FFF' }}>
+                  {page}
+                </Link>
               </Button>
             ))}
           </Box>

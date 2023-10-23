@@ -6,6 +6,7 @@ import PortfolioAppBar from '../common/appBar'
 import PortfolioFooter from '../common/footer'
 import About from './About'
 import Work from './Work'
+import Contact from './Contact'
 
 export default function Portfolio() {
   return (
@@ -63,12 +64,10 @@ export default function Portfolio() {
         </Box>
         <About />
         <Work />
+        <Contact />
       </main>
       {/* Footer */}
       <Box sx={{ p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
         <Typography
           variant="subtitle1"
           align="center"
