@@ -89,7 +89,7 @@ const PortfolioAppBar: React.FC = (): ReactElement => {
               ))}
               <MenuItem key={'resume'} onClick={handleCloseNavMenu}>
                 <a
-                    href="../public/2023.08.resume.pdf"
+                    href="https://docs.google.com/document/d/e/2PACX-1vQe5IN-HkoK0H6po4S1jczD-jKHcZXBe7BZQLClCLgXwWqBgMdLaVzqvfY7HRYG4sqaqFwKkcfx2grf/pub"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -125,6 +125,15 @@ const PortfolioAppBar: React.FC = (): ReactElement => {
                 </Link>
               </Button>
             ))}
+            <Button sx={{ ml: 1, mr: 1, mt: 0, mb: 0, display: {xs: 'none', md: 'flex'} }}>
+                <Link
+                    href="https://docs.google.com/document/d/e/2PACX-1vQe5IN-HkoK0H6po4S1jczD-jKHcZXBe7BZQLClCLgXwWqBgMdLaVzqvfY7HRYG4sqaqFwKkcfx2grf/pub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{textDecoration: 'none', color: '#FFF'}}
+                >
+                  RESUME </Link>
+              </Button>
           </Box>
         </Toolbar>
       </Container>

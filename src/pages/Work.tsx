@@ -43,9 +43,6 @@ const cards = [
     shortDesc: 'Built to enable solar sales. Includes user management, CAD drawing overlays, Google Maps, NearMap, and Google Geocoding APIs, Financing API integrations with multiple lenders, and DocuSign integrated flow. Contact me if you\'re interested in seeing the site in action!',
     techStack: [materialUI48, javascript48, react48, nodejs48, gmaps48, graphql48],
     img: synergy,
-    client: 'https://github.com/SigoraSolar/Central',
-    server: 'https://github.com/SigoraSolar/document-service',
-    liveSite: 'https://app.sigora.solar/'
   },
   {
     id: 2,
