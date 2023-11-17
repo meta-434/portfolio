@@ -1,0 +1,17 @@
+{
+  "json.schemaDownload.enable": true,
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "eslint.validate": ["typescript", "typescriptreact"],
+  "editor.formatOnType": false, // required
+  "editor.formatOnPaste": true, // optional
+  "editor.formatOnSave": true, // optional
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSaveMode": "file", // required to format on save
+  "files.autoSave": "onFocusChange", // optional but recommended
+  "vs-code-prettier-eslint.prettierLast": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  } // set as "true" to run 'prettier' last not first
+}
