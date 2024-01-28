@@ -18,7 +18,9 @@ import react48 from '../public/icons/icons8-react-48.svg'
 import javascript48 from '../public/icons/icons8-javascript-48.svg'
 import typescript48 from '../public/icons/icons8-typescript-48.svg'
 import materialUI48 from '../public/icons/icons8-material-ui-48.svg'
-import nextjs48 from '../public/icons/svgrepo-nextjs-48.svg'
+import vite48 from '../public/icons/icons8-vite-48.svg'
+import docker48 from '../public/icons/icons8-docker-48.svg'
+import express48 from '../public/icons/icons8-express-48.svg'
 import nodejs48 from '../public/icons/icons8-node-js-48.svg'
 import gmaps48 from '../public/icons/icons8-google-maps-48.svg'
 import graphql48 from '../public/icons/icons8-graphql-48.svg'
@@ -31,8 +33,9 @@ interface nextImage extends Object {
 const cards = [
   { id: 0,
     name: 'BrewJournal - Under Construction!',
-    shortDesc: 'An application for the ultimate coffee nerd. Intended to encourage sharing and discovering of coffees, roasters, and brewing methods. A fully dockerized monorepo with a TypeScript React frontend and a TypeScript Node/Express/Knex/PostgresQL backend. Uses Auth0 for identity and access management.',
+    shortDesc: 'An application for the ultimate coffee nerd. Intended to encourage sharing and discovering of coffees, roasters, and brewing methods. A fully dockerized monorepo with a TypeScript React/Vite/MaterialUI frontend and a TypeScript Node/Express/Knex/PostgresQL backend. Uses Auth0 for identity and access management. Under live development! Check out my progress on GitHub!',
     img: brewjournal,
+    techStack: [typescript48, react48, vite48, materialUI48, nodejs48, express48, docker48],
     monorepo: 'https://github.com/meta-434/brewjournal'
   },
   { id: 1,
