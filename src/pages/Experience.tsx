@@ -44,12 +44,12 @@ export default function Experience () {
               I quit my first job out of college after a year (analyst for a consulting firm in Washington, DC) and 
               did a complete 180° by going back to school to chase my dream of becoming a software developer. After most
               of an Associates of Engineering, a competitive internship program with <> </>
-               <Link target='_blank' href='https://joinforge.co/'>Forge</Link>, and 4 years of development at a solar company
+               <Link target='_blank' href='https://joinforge.co/'>Forge</Link>, and 4 years of development at a now-defunct solar company
               transitioning out of the startup phase, I've developed a powerful love for frontend development.
               <br />
               <br />
-              Right now I&apos;m interested in new JS technologies like SSR, and gaining
-              experience wherever I can.
+              Right now I&apos;m interested in practicing TypeScript, remaning fresh with hooks, and learning as much as
+               I can about dockerization, and picking up new skills and experience wherever I can.
               <br />
               <br />
               <b>

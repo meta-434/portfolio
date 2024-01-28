@@ -31,12 +31,9 @@ interface nextImage extends Object {
 const cards = [
   { id: 0,
     name: 'BrewJournal - Under Construction!',
-    shortDesc: 'An application for the ultimate coffee nerd. Intended to encourage sharing and discovering of coffees, roasters, and brewing methods. Built using TypeScript with Next.js, React, and Material-UI.',
-    techStack: [materialUI48, nextjs48, typescript48, react48],
+    shortDesc: 'An application for the ultimate coffee nerd. Intended to encourage sharing and discovering of coffees, roasters, and brewing methods. A fully dockerized monorepo with a TypeScript React frontend and a TypeScript Node/Express/Knex/PostgresQL backend. Uses Auth0 for identity and access management.',
     img: brewjournal,
-    client: 'https://github.com/meta-434/brewjournal',
-    server: 'https://github.com/meta-434/brewjournal-server',
-    liveSite: 'https://brewjournal-staging.vercel.app/'
+    monorepo: 'https://github.com/meta-434/brewjournal'
   },
   { id: 1,
     name: 'Synergy by Sigora Solar',
@@ -109,8 +106,9 @@ export default function Work() {
                 </Typography>
               </CardContent>
               <CardActions>
-                { card.client ? <Button size="small" sx={{width: '100%'}}><Link target="_blank" href={`/portfolio/${card.client}`}>Client GitHub</Link></Button> : ''}
-                { card.server ? <Button size="small" sx={{width: '100%'}}><Link target="_blank" href={'/server'}>Server GitHub</Link></Button>  : ''}
+                { card.monorepo ? <Button size="small" sx={{width: '100%'}}><Link target="_blank" href={`${card.monorepo}`}>Monorepo</Link></Button> : ''}
+                { card.client ? <Button size="small" sx={{width: '100%'}}><Link target="_blank" href={`${card.client}`}>Client GitHub</Link></Button> : ''}
+                { card.server ? <Button size="small" sx={{width: '100%'}}><Link target="_blank" href={`${card.server}`}>Server GitHub</Link></Button>  : ''}
                 { card.liveSite ? <Button size="small" sx={{width: '100%'}}><Link target="_blank" href={`${card.liveSite}`}>Live Site</Link></Button> : ''}
               </CardActions>
               </div>
