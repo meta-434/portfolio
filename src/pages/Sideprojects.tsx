@@ -24,7 +24,19 @@ interface nextImage extends Object {
   src: string;
 }
 
-const cards = [
+export interface ProjectCard {
+  id: number;
+  name: string;
+  shortDesc: string;
+  img: any;
+  techStack?: any[];
+  monorepo?: string;
+  server?: string;
+  client?: string;
+  liveSite?: string;
+}
+
+const cards: ProjectCard[] = [
   {
     id: 0,
     name: 'BrewJournal - Under Construction!',
@@ -49,6 +61,7 @@ const cards = [
     shortDesc:
       'An exploration into Godot - trying to implement an idea about how a mage casting spells should draw on the state of the voxels they intend to manipulate - to interested and varied effects. Using Godot and the help of Claude to learn the new tooling.',
     techStack: [godot],
+    monorepo: 'https://github.com/meta-434/brewjournal',
   },
 ];
 

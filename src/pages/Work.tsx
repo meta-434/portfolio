@@ -25,12 +25,13 @@ import express48 from '../public/icons/icons8-express-48.svg';
 import nodejs48 from '../public/icons/icons8-node-js-48.svg';
 import gmaps48 from '../public/icons/icons8-google-maps-48.svg';
 import graphql48 from '../public/icons/icons8-graphql-48.svg';
+import type { ProjectCard } from './Sideprojects';
 
 interface nextImage extends Object {
   src: string;
 }
 
-const cards = [
+const cards: ProjectCard[] = [
   {
     id: 1,
     name: 'Synergy by Sigora Solar',
