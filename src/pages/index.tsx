@@ -1,13 +1,14 @@
-import * as React from 'react'
-import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
-import Container from '@mui/material/Container'
-import PortfolioAppBar from '../common/appBar'
-import PortfolioFooter from '../common/footer'
-import About from './About'
-import Work from './Work'
-import Contact from './Contact'
-import Experience from './Experience'
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Sideprojects from './Sideprojects';
+import PortfolioAppBar from '../common/appBar';
+import PortfolioFooter from '../common/footer';
+import About from './About';
+import Work from './Work';
+import Contact from './Contact';
+import Experience from './Experience';
 
 export default function Portfolio() {
   return (
@@ -15,8 +16,9 @@ export default function Portfolio() {
       <PortfolioAppBar />
       <main>
         {/* Hero unit */}
-        <Experience />
         <About />
+        <Experience />
+        <Sideprojects />
         <Work />
         <Contact />
       </main>
@@ -28,11 +30,18 @@ export default function Portfolio() {
           color="text.secondary"
           component="p"
         >
-          icons by <a target="_blank" href="https://icons8.com">Icons8</a> and <a target="_blank" href="https://www.svgrepo.com/">SVGRepo</a>
+          icons by{' '}
+          <a target="_blank" href="https://icons8.com">
+            Icons8
+          </a>{' '}
+          and{' '}
+          <a target="_blank" href="https://www.svgrepo.com/">
+            SVGRepo
+          </a>
         </Typography>
         <PortfolioFooter />
       </Box>
       {/* End footer */}
     </>
-  )
+  );
 }
